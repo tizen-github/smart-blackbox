@@ -23,7 +23,7 @@ CO2 센서의 CO2 측정값을 읽어오는 프로젝트입니다.
 [해당 프로젝트 크래프트룸 바로가기](https://craftroom.tizen.org/co2/)
 
 소스코드는 아래 git repository에서 다운로드 가능  
-https://git.tizen.org/cgit/apps/native/st-things-co2-meter
+git://git.tizen.org/cgit/apps/native/st-things-co2-meter
 
 ![co2_app](https://user-images.githubusercontent.com/44985886/48754045-a842ba00-ecd3-11e8-9617-e8e51b7d5e88.jpg)
 
@@ -37,8 +37,7 @@ https://git.tizen.org/cgit/apps/native/st-things-co2-meter
 
 [해당 프로젝트 크래프트룸 바로가기](https://craftroom.tizen.org/illuminance_to_servo/)
 
-소스코드는 아래 git repository에서 다운로드 가능  
-https://git.tizen.org/cgit/apps/native/st-things-co2-meter
+소스코드는 아래 git repository에서 다운로드 가능  git://git.tizen.org/apps/native/st-things-blind
 
 ![illuminance](https://user-images.githubusercontent.com/44985886/48767352-ece14c00-ecf9-11e8-9cc2-0170c8717ad5.jpg)
 
@@ -53,7 +52,7 @@ https://git.tizen.org/cgit/apps/native/st-things-co2-meter
 [해당 프로젝트 크래프트룸 바로가기](https://craftroom.tizen.org/smartmotionlight/)
 
 소스코드는 아래 git repository에서 다운로드 가능  
-https://git.tizen.org/cgit/apps/native/st-things-light/
+git://git.tizen.org/cgit/apps/native/st-things-light/
 
 ![motion](https://tizen-prod-craftroom.s3.amazonaws.com/uploads/2018/08/title_smart_motion_light_basic.png)
 
