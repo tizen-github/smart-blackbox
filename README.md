@@ -37,7 +37,8 @@ git://git.tizen.org/cgit/apps/native/st-things-co2-meter
 
 [해당 프로젝트 크래프트룸 바로가기](https://craftroom.tizen.org/illuminance_to_servo/)
 
-소스코드는 아래 git repository에서 다운로드 가능  git://git.tizen.org/apps/native/st-things-blind
+소스코드는 아래 git repository에서 다운로드 가능  
+git://git.tizen.org/apps/native/st-things-blind
 
 ![illuminance](https://user-images.githubusercontent.com/44985886/48767352-ece14c00-ecf9-11e8-9cc2-0170c8717ad5.jpg)
 
