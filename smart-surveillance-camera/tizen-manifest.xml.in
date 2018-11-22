@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="5.0" package="@PROJECT_NAME@" version="1.0.0">
+<profile name="iot-headless"/>
+<service-application appid="@PROJECT_NAME@" auto-restart="true" exec="@PROJECT_NAME@" multiple="false" nodisplay="true" on-boot="true" taskmanage="false" type="capp">
+	<label>@PROJECT_NAME@</label>
+	<icon>@PROJECT_NAME@.png</icon>
+	<metadata key="http://tizen.org/iot/metadata/master" value="shared/res/master.json"/>
+	<metadata key="http://tizen.org/iot/metadata/resource" value="shared/res/resource.json"/>
+	<metadata key="samsung-experience-service-api-level" value="1"/>
+	<background-category value="background-network"/>
+	<background-category value="iot-communication"/>
+</service-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/camera</privilege>
+		<privilege>http://tizen.org/privilege/peripheralio</privilege>
+		<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+		<privilege>http://tizen.org/privilege/datasharing</privilege>
+		<privilege>http://tizen.org/privilege/internet</privilege>
+		<privilege>http://tizen.org/privilege/softap</privilege>
+		<appdefined-privilege>http://com.samsung.tizen.smartthings-thing/appdefined/smartthings-thing.master</appdefined-privilege>
+		<appdefined-privilege>http://com.samsung.tizen.smartthings-thing/appdefined/smartthings-thing.resource</appdefined-privilege>
+	</privileges>
+</manifest>

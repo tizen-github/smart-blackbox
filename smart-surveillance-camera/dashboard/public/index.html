@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="TEST PAGE">
+    <meta name="author" content="salt">
+
+    <title>Tizen IoT</title>
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="text-container">
+            <div id="project-title">Tizen IoT<br>Smart Surveillance Camera</div>
+            <div id="project-main-text">
+                <ul>
+                    <li class="step1">Captures images continuously with a USB camera</li>
+                    <li class="step2">Detects motion of objects in the images</li>
+                    <li class="step3">Controls servomotors to follow the motion</li>
+                    <li class="step4">Sends the images to connected web clients</li>
+                    <li class="step5">Displays a live view of images in each web client</li>
+                    <li class="step6">Sends motion info to SmartThings Cloud</li>
+                    <li class="step7">Displays motion info on SmartThings Mobile App</li>
+                    <li class="step8 nobull"><span class="try-it-bullet">TRY IT!</span>You can manually control servomotors using the SmartThings Mobile App</li>
+                </ul>
+            </div>
+        </div>
+        <div id="diagram-container">
+            <div id="diagram-bg"></div>
+            <div id="diagram-title">Tizen IoT made in Craftroom</div>
+            <div id="diagram-top" class="diagram-main">
+                <div class="arrow-02 arrow step2"></div>
+                <div class="d-text-tizen step3 step8">Peripheral IO</div>
+                <div class="arrow-04 arrow step3 step8"><span class="caption-arrow">moving</span></div>
+                <div class="d-text-tizen step3 step8">Servomotor</div>
+            </div>
+            <div id="diagram-middle" class="diagram-main">
+                <div class="d-text-tizen step1" id="d-text-camera">Camera<span class="caption-text">capturing</span></div>
+                <div class="arrow-01 arrow step1"></div>
+                <div class="d-text-tizen step2" id="d-text-vision">Vision<span class="caption-text">analysing</span></div>
+                <div class="arrow-01 arrow step2"></div>
+                <div class="d-text-tizen step4">IoT.js</div>
+                <div class="arrow-06 arrow step4"><span class="caption-arrow">live streaming (<span id="fps">0</span> fps)</span></div>
+                <div class="d-text-st step5">Web Client<span class="caption-text">(this screen)</span></div>
+            </div>
+            <div id="diagram-bottom" class="diagram-main">
+                <div class="arrow-03 arrow step2"></div>
+                <div class="d-text-tizen step6 step8">SmartThings SDK</div>
+                <div class="arrow-05 arrow step6 step8"><span class="caption-arrow">transferring</span></div>
+                <div class="d-text-st two-line step6 step8">SmartThings<br>Cloud</div>
+                <div class="arrow-04 arrow step6 step8"></div>
+                <div class="d-text-st two-line step7 step8">SmartThings<br>Mobile App</div>
+            </div>
+            <div id="diagram-right">
+                <div class="arrow-07 arrow step5"></div>
+                <div class="arrow-08 arrow step7 step8"></div>
+                <div id="mobile">
+                    <div id="mobile-detection">Motion<br>Detected</div>
+                    <div id="mobile-caption" class="image-caption">Mobile Device</div>
+                </div>
+            </div>
+        </div>
+        <div id="camera-container">
+            <div id="canvas-container">
+                <canvas id="camera-view-canvas" width="640" height="480"></canvas>
+            </div>
+            <div id="camera-view-bg"></div>
+            <img id="camera-view"/>
+            <div id="camera-view-caption" class="image-caption">Camera Live View</div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+</body>
+
+</html>

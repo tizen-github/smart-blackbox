@@ -1,0 +1,17 @@
+[Unit]
+Description=IoT Dashboard
+After=network.target
+
+[Service]
+Type=idle
+SmackProcessLabel=System
+WorkingDirectory=/opt/home/dashboard
+ExecStart=/usr/bin/iotjs server.js
+Restart=on-failure
+RestartSec=0
+NonBlocking=yes
+KillMode=process
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target
