@@ -5,8 +5,9 @@
 
 [해당 프로젝트 크래프트룸 바로가기](https://craftroom.tizen.org/%ec%95%84%ed%8b%b1%ec%9c%bc%eb%a1%9c-smart-surveillance-camera-%eb%a7%8c%eb%93%a4%ea%b8%b0/)
 
-소스코드는 아래 git repository에서 다운로드 가능  
-git://git.tizen.org/apps/native/smart-surveillance-camera
+원본 소스코드는 아래 git repository에서 다운로드 가능  
+git://git.tizen.org/apps/native/smart-surveillance-camera  
+복사본은 smart-surveillance-camera 폴더에...
 
 ![smart-camera](https://tizen-prod-craftroom.s3.amazonaws.com/uploads/2018/11/18503b64-e758-11e8-9e15-d6d14ff41f9e-1.jpg)
 
@@ -22,8 +23,9 @@ CO2 센서의 CO2 측정값을 읽어오는 프로젝트입니다.
 
 [해당 프로젝트 크래프트룸 바로가기](https://craftroom.tizen.org/co2/)
 
-소스코드는 아래 git repository에서 다운로드 가능  
-git://git.tizen.org/cgit/apps/native/st-things-co2-meter
+원본 소스코드는 아래 git repository에서 다운로드 가능  
+git://git.tizen.org/apps/native/st-things-co2-meter  
+복사본은 st-things-co2-meter 폴더에...
 
 ![co2_app](https://user-images.githubusercontent.com/44985886/48754045-a842ba00-ecd3-11e8-9617-e8e51b7d5e88.jpg)
 
@@ -37,8 +39,9 @@ git://git.tizen.org/cgit/apps/native/st-things-co2-meter
 
 [해당 프로젝트 크래프트룸 바로가기](https://craftroom.tizen.org/illuminance_to_servo/)
 
-소스코드는 아래 git repository에서 다운로드 가능  
-git://git.tizen.org/apps/native/st-things-blind
+원본 소스코드는 아래 git repository에서 다운로드 가능  
+git://git.tizen.org/apps/native/st-things-blind  
+복사본은 st-things-blind 폴더에...
 
 ![illuminance](https://user-images.githubusercontent.com/44985886/48767352-ece14c00-ecf9-11e8-9cc2-0170c8717ad5.jpg)
 
@@ -52,8 +55,9 @@ git://git.tizen.org/apps/native/st-things-blind
 
 [해당 프로젝트 크래프트룸 바로가기](https://craftroom.tizen.org/smartmotionlight/)
 
-소스코드는 아래 git repository에서 다운로드 가능  
-git://git.tizen.org/cgit/apps/native/st-things-light/
+원본 소스코드는 아래 git repository에서 다운로드 가능  
+git://git.tizen.org/apps/native/st-things-light  
+복사본은 st-things-light 폴더에...
 
 ![motion](https://tizen-prod-craftroom.s3.amazonaws.com/uploads/2018/08/title_smart_motion_light_basic.png)
 
