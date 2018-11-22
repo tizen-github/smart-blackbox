@@ -1,0 +1,37 @@
+{
+  "resources": {
+    "single": [
+      {
+        "uri": "/capability/airQualitySensor/main/0",
+        "types": [
+          "x.com.st.airqualitylevel"
+        ],
+        "interfaces": [
+          "oic.if.s",
+          "oic.if.baseline"
+        ]
+      }
+    ]
+  },
+  "resourceTypes": [
+    {
+      "type": "x.com.st.airqualitylevel",
+      "properties": [
+        {
+          "key": "airQuality",
+          "type": "double",
+          "readOnly": 1,
+          "mandatory": true,
+          "isArray": false
+        },
+        {
+          "key": "range",
+          "type": "double",
+          "readOnly": 1,
+          "mandatory": true,
+          "isArray": true
+        }
+      ]
+    }
+  ]
+}
