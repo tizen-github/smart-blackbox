@@ -1,0 +1,18 @@
+{
+  "devices": [
+    {
+      "deviceType": "x.wwst.d.basic",
+      "deviceName": "Motion",
+      "mnid": "fDj0",
+      "vid": "bson"
+    }
+  ],
+  "configuration": {
+    "easySetup": {
+      "mode": 1,
+      "setupId": "000"
+    },
+    "otm": 2,
+    "crtType": 1
+  }
+}
