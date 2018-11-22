@@ -1,0 +1,97 @@
+{
+  "device": [
+    {
+      "specification": {
+        "device": {
+          "deviceType": "oic.d.light",
+          "deviceName": "*** YOUR DEVICE NAME ***",
+          "specVersion": "core.1.1.0",
+          "dataModelVersion": "res.1.1.0"
+        },
+        "platform": {
+          "manufacturerName": "*** YOUR MNID ***",
+          "manufacturerUrl": "http://www.samsung.com/sec/",
+          "manufacturingDate": "2017-08-31",
+          "modelNumber": "BLIND-01",
+          "platformVersion": "1.0",
+          "osVersion": "1.0",
+          "hardwareVersion": "1.0",
+          "firmwareVersion": "1.0",
+          "vendorId": "*** YOUR VENDOR ID ***"
+        }
+      },
+      "resources": {
+        "single": [
+          {
+            "uri": "/capability/illuminanceMeasurement/main/0",
+            "types": [
+              "oic.r.sensor.illuminance"
+            ],
+            "interfaces": [
+              "oic.if.s",
+              "oic.if.baseline"
+            ],
+            "policy": 3
+          },
+          {
+            "uri": "/capability/doorControl/main/0",
+            "types": [
+              "x.com.st.doorcontrol"
+            ],
+            "interfaces": [
+              "oic.if.baseline",
+              "oic.if.a"
+            ],
+            "policy": 3
+          }
+        ]
+      }
+    }
+  ],
+  "resourceTypes": [
+    {
+      "type": "oic.r.sensor.illuminance",
+      "properties": [
+        {
+          "key": "illuminance",
+          "type": 2,
+          "mandatory": true,
+          "rw": 1
+        }
+      ]
+    },
+    {
+      "type": "x.com.st.doorcontrol",
+      "properties": [
+        {
+          "key": "doorState",
+          "type": 3,
+          "mandatory": true,
+          "rw": 3
+        }
+      ]
+    }
+  ],
+  "configuration": {
+    "easySetup": {
+      "connectivity": {
+        "type": 1,
+        "softAP": {
+          "setupId": "*** YOUR SETUPID ***",
+          "artik": false
+        }
+      },
+      "ownershipTransferMethod": 2
+    },
+    "wifi": {
+      "interfaces": 15,
+      "frequency": 1
+    },
+    "filePath": {
+      "svrdb": "artikserversecured.dat",
+      "provisioning": "provisioning.dat",
+      "certificate": "certificate.pem",
+      "privateKey": "privatekey.der"
+    }
+  }
+}
