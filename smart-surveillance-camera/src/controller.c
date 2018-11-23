@@ -41,8 +41,8 @@
 #define IMAGE_FILE_PREFIX "CAM_"
 #define EVENT_INTERVAL_SECOND 0.5f
 
-#define TEMP_IMAGE_FILENAME "/tmp/tmp.jpg"
-#define LATEST_IMAGE_FILENAME "/tmp/latest.jpg"
+//#define TEMP_IMAGE_FILENAME "/opt/usr/home/owner/apps_rw/org.tizen.smart-surveillance-camera/shared/data/tmp.jpg"
+//#define LATEST_IMAGE_FILENAME "/opt/usr/home/owner/apps_rw/org.tizen.smart-surveillance-camera/shared/data/latest.jpg"
 
 // #define ENABLE_SMARTTHINGS
 #define APP_CALLBACK_KEY "controller"
@@ -66,6 +66,9 @@ typedef struct app_data_s {
 
 	Ecore_Thread *image_writter_thread;
 	pthread_mutex_t mutex;
+
+	char* temp_image_filename;
+	char* latest_image_filename;
 } app_data;
 
 static long long int __get_monotonic_ms(void)
@@ -152,11 +155,11 @@ static void __thread_write_image_file(void *data, Ecore_Thread *th)
 	}
 	pthread_mutex_unlock(&ad->mutex);
 
-	ret = controller_image_save_image_file(TEMP_IMAGE_FILENAME, width, height, buffer, image_info, strlen(image_info));
+	ret = controller_image_save_image_file(ad->temp_image_filename, width, height, buffer, image_info, strlen(image_info));
 	if (ret) {
 		_E("failed to save image file");
 	} else {
-		ret = rename(TEMP_IMAGE_FILENAME, LATEST_IMAGE_FILENAME);
+		ret = rename(ad->temp_image_filename, ad->latest_image_filename);
 		if (ret != 0 )
 			_E("Rename fail");
 	}
@@ -467,6 +470,18 @@ static bool service_app_create(void *data)
 {
 	app_data *ad = (app_data *)data;
 
+	char* shared_data_path = app_get_shared_data_path();
+	if (shared_data_path == NULL) {
+		_E("Failed to get shared data path");
+		goto ERROR;
+	}
+	ad->temp_image_filename = g_strconcat(shared_data_path, "tmp.jpg", NULL);
+	ad->latest_image_filename = g_strconcat(shared_data_path, "latest.jpg", NULL);
+	free(shared_data_path);
+
+	_D("%s", ad->temp_image_filename);
+	_D("%s", ad->latest_image_filename);
+
 	controller_image_initialize();
 
 	pthread_mutex_init(&ad->mutex, NULL);
@@ -529,6 +544,8 @@ static void service_app_terminate(void *data)
 	Ecore_Thread *thread_id = NULL;
 	unsigned char *buffer = NULL;
 	char *info = NULL;
+	gchar *temp_image_filename;
+	gchar *latest_image_filename;
 	_D("App Terminated - enter");
 
 	resource_camera_close();
@@ -556,9 +573,15 @@ static void service_app_terminate(void *data)
 	ad->latest_image_buffer = NULL;
 	info  = ad->latest_image_info;
 	ad->latest_image_info = NULL;
+	temp_image_filename = ad->temp_image_filename;
+	ad->temp_image_filename = NULL;
+	latest_image_filename = ad->latest_image_filename;
+	ad->latest_image_filename = NULL;
 	pthread_mutex_unlock(&ad->mutex);
 	free(buffer);
 	free(info);
+	g_free(temp_image_filename);
+	g_free(latest_image_filename);
 
 	pthread_mutex_destroy(&ad->mutex);
 	free(ad);

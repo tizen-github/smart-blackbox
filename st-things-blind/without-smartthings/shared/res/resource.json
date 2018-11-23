@@ -1,0 +1,52 @@
+{
+  "resources": {
+    "single": [
+      {
+        "uri": "/capability/illuminanceMeasurement/main/0",
+        "types": [
+          "oic.r.sensor.illuminance"
+        ],
+        "interfaces": [
+          "oic.if.s",
+          "oic.if.baseline"
+        ]
+      },
+      {
+        "uri": "/capability/doorControl/main/0",
+        "types": [
+          "x.com.st.doorcontrol"
+        ],
+        "interfaces": [
+          "oic.if.baseline",
+          "oic.if.a"
+        ]
+      }
+    ]
+  },
+  "resourceTypes": [
+    {
+      "type": "oic.r.sensor.illuminance",
+      "properties": [
+        {
+          "key": "illuminance",
+          "type": "double",
+          "readOnly": 1,
+          "mandatory": true,
+          "isArray": false
+        }
+      ]
+    },
+    {
+      "type": "x.com.st.doorcontrol",
+      "properties": [
+        {
+          "key": "doorState",
+          "type": "string",
+          "readOnly": 3,
+          "mandatory": true,
+          "isArray": false
+        }
+      ]
+    }
+  ]
+}

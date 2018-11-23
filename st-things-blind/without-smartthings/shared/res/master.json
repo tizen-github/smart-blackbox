@@ -1,0 +1,18 @@
+{
+  "devices": [
+    {
+      "deviceType": "oic.d.light",
+      "deviceName": "Smart_Blind",
+      "mnid": "***Your MNID***",
+      "vid": "Blind_Vendor"
+    }
+  ],
+  "configuration": {
+    "easySetup": {
+      "mode": 1,
+      "setupId": "***Your Setup ID"
+    },
+    "otm": 2,
+    "crtType": 1
+  }
+}

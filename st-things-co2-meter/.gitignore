@@ -1,0 +1,6 @@
+.package-stamp
+.settings/
+.sign/
+.vscode
+*.backup
+Debug/
