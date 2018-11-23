@@ -7,7 +7,7 @@
 
 원본 소스코드는 아래 git repository에서 다운로드 가능  
 git://git.tizen.org/apps/native/smart-surveillance-camera  
-복사본은 smart-surveillance-camera 폴더에...
+복사본은 [smart-surveillance-camera](./smart-surveillance-camera) 폴더에...
 
 ![smart-camera](https://tizen-prod-craftroom.s3.amazonaws.com/uploads/2018/11/18503b64-e758-11e8-9e15-d6d14ff41f9e-1.jpg)
 
